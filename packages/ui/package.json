@@ -1,0 +1,38 @@
+{
+  "name": "@vevibe/ui",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rm -rf .turbo .cache node_modules",
+    "lint": "biome lint",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "ui-add": "pnpm dlx shadcn@latest add"
+  },
+  "exports": {
+    ".": "./src/index.tsx",
+    "./form": "./src/components/form/index.tsx"
+  },
+  "dependencies": {
+    "@conform-to/react": "^1.2.2",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.446.0",
+    "react": "^18.3.1",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.2.61",
+    "@vevibe/tailwind": "workspace:*",
+    "@vevibe/typescript": "workspace:*",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "react": "^18.3.1",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

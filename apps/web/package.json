@@ -1,0 +1,42 @@
+{
+  "name": "@vevibe/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 5000",
+    "build": "next build",
+    "clean": "rm -rf .next .turbo .cache node_modules",
+    "lint": "biome lint",
+    "format": "biome format --write .",
+    "start": "next start -p 5000",
+    "typecheck": "tsc --noEmit",
+    "knip": "pnpx knip --config knip.json"
+  },
+  "dependencies": {
+    "@conform-to/react": "^1.2.2",
+    "@conform-to/zod": "^1.2.2",
+    "@oslojs/encoding": "^1.1.0",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "@vevibe/api": "workspace:*",
+    "@vevibe/ui": "workspace:*",
+    "next": "14.2.14",
+    "next-themes": "^0.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18",
+    "@vevibe/tailwind": "workspace:*",
+    "@vevibe/typescript": "workspace:*",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "jiti": "^2.3.3",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5"
+  }
+}

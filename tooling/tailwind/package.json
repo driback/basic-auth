@@ -1,0 +1,15 @@
+{
+  "name": "@vevibe/tailwind",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@vevibe/typescript": "workspace:*",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  }
+}

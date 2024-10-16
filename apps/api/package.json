@@ -1,0 +1,45 @@
+{
+  "name": "@vevibe/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:studio": "drizzle-kit studio",
+    "db:push": "drizzle-kit push",
+    "db:seed": "tsx src/seed.ts",
+    "dev": "pnpm --filter @vevibe/api --parallel \"/^dev:.*/\"",
+    "dev:hono": "tsx watch src/index.ts",
+    "dev:watch": "tsup --watch",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "clean": "rm -rf .turbo .cache node_modules dist",
+    "lint": "biome lint",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "knip": "pnpx knip"
+  },
+  "exports": {
+    "./hc": {
+      "types": "./dist/hc.d.ts",
+      "import": "./dist/hc.js"
+    }
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.1",
+    "@hono/zod-validator": "^0.3.0",
+    "@t3-oss/env-core": "^0.11.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.33.0",
+    "hono": "^4.6.3",
+    "ioredis": "^5.4.1",
+    "oslo": "^1.2.1",
+    "p-retry": "^6.2.0",
+    "postgres": "^3.4.4",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "drizzle-kit": "^0.24.2",
+    "tsup": "^8.3.0",
+    "tsx": "^4.7.1"
+  }
+}
